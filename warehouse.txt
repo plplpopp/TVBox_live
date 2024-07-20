@@ -5,7 +5,7 @@
             "name": "影视"
         },
         {
-            "url": "https://api.451460.xyz",
+            "url": "https://github.moeyy.xyz/raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
             "name": "panda_影视"
         },
         {
