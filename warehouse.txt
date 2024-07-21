@@ -25,7 +25,7 @@
             "name": "yosakoi"
         },
         {
-            "url": "https://gh.xxooo.cf/raw.githubusercontent.com/hl128k/tvbox/main/tv/0/anaer_meow.json",
+            "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/hl128k/tvbox/main/tv/0/anaer_meow.json",
             "name": "搞机大师"
         }
     ]
