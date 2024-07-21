@@ -25,7 +25,7 @@
             "name": "yosakoi"
         },
         {
-            "url": "https://raw.gitcode.com/wang2023-JX/TVBox/raw/main/gaoji.json",
+            "url": "https://gh.xxooo.cf/raw.githubusercontent.com/hl128k/tvbox/main/tv/0/anaer_meow.json",
             "name": "搞机大师"
         }
     ]
