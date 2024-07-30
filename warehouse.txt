@@ -1,12 +1,12 @@
 {
     "urls": [
         {
-            "url": "https://voapi.451460.xyz",
-            "name": "影视"
+            "url": "https://api.451460.xyz/",
+            "name": "panda_影视"
         },
         {
-            "url": "https://api.451460.xyz",
-            "name": "panda_影视"
+            "url": "https://voapi.451460.xyz/",
+            "name": "影视"
         },
         {
             "url": "http://pandown.pro/tvbox/tvbox.json",
@@ -25,7 +25,7 @@
             "name": "yosakoi"
         },
         {
-            "url": "https://raw.gitcode.com/wang2023-JX/TVBox/raw/main/gaoji.json",
+            "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/hl128k/tvbox/main/tv/0/anaer_meow.json",
             "name": "搞机大师"
         }
     ]
