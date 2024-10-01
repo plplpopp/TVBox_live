@@ -4,41 +4,58 @@ import os
 import threading
 import time
 import sys
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 
-def get_url(name, num_pages=1):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
-    }
-
-    url = "http://tonkiang.us/"
-    # 电视台名字搜索
-    data = {
-        "search": f"{name}",
-        "Submit": " "
-    }
+def get_url(name):
     try:
-        res = requests.get(url, headers=headers, data=data, verify=False)
-        cookie = res.cookies
-        # 搜索页数
+        # 配置ChromeOptions以启用无头模式
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+
+        # 设置ChromeDriver
+        driver = webdriver.Chrome(options=chrome_options)
+
+        # 创建Chrome WebDriver 实例
+        # driver = webdriver.Chrome(options=options)
+
+        # 打开指定页面
+        driver.get('http://tonkiang.us/')
+
+        username_input = driver.find_element(By.ID, 'search')
+        username_input.send_keys(f'{name}')
+        submit_button = driver.find_element(By.NAME, 'Submit')
+        submit_button.click()
+
+        # 获取页面的源代码
+        page_source = driver.page_source
+
+        # 打印源代码
+        print(type(page_source))
         m3u8_list = []
-        for i in range(num_pages):
-            print(f"正在搜索第{i+1}页...")
-            time.sleep(3)
-            url = f"http://tonkiang.us/?page={i + 1}&s={name}"
-            response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
-            # print(response.text)
-            # 将 HTML 转换为 Element 对象
-            root = etree.HTML(response.text)
-            result_divs = root.xpath("//div[@class='resultplus']")
-            # 打印提取到的 <div class="result"> 标签
-            for div in result_divs:
-                # 如果要获取标签内的文本内容
-                # print(etree.tostring(div, pretty_print=True).decode())
-                for element in div.xpath(".//tba"):
-                    if element.text is not None:
-                        m3u8_list.append(element.text.strip())
-                        print(element.text.strip())
+        # 将 HTML 转换为 Element 对象
+        root = etree.HTML(page_source)
+        result_divs = root.xpath("//div[@class='resultplus']")
+        print(f"搜索结果页数: {len(result_divs)}")
+        # 打印提取到的 <div class="result"> 标签
+        for div in result_divs:
+            # 如果要获取标签内的文本内容
+            # print(etree.tostring(div, pretty_print=True).decode())
+            for element in div.xpath(".//tba"):
+                if element.text is not None:
+                    # m3u8_list.append(element.text.strip())
+                    print(element.text.strip())
+                    m3u8_list.append(element.text.strip())
+                    with open('m3u8_list.txt', 'a', encoding='utf-8') as f:
+                        f.write(element.text.strip() + '\n')
+
+        # 关闭WebDriver
+        driver.quit()
         return m3u8_list
 
     except requests.exceptions.RequestException as e:
@@ -152,15 +169,8 @@ if __name__ == '__main__':
     tv_dict = {}
     # 输入要搜索的直播源名称
     name = input('请输入要搜索的直播源名称：')
-    try:
-        # 输入要搜索的直播源页数
-        num_pages = int(input('请输入要搜索的直播源页数：'))
-    except ValueError:
-        num_pages = None
-    if num_pages is None:
-        num_pages = 1
     # 调用get_url函数获取直播源m3u8链接
-    m3u8_list = get_url(name, num_pages)
+    m3u8_list = get_url(name)
     tv_dict[name] = m3u8_list
     print(name)
     print('---------字典加载完成！------------')

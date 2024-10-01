@@ -198,9 +198,9 @@ NewTV_精品体育「IPV6」,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamob
 
 
 🇭🇰港台,#genre#
-凤凰中文,http://116.162.6.192/1.v.smtcdns.net/qctv.fengshows.cn/live/0701pcc72.m3u8
-凤凰资讯,http://116.162.6.192/1.v.smtcdns.net/qctv.fengshows.cn/live/0701pin72.m3u8
-凤凰香港,http://116.162.6.192/1.v.smtcdns.net/qctv.fengshows.cn/live/0701phk72.m3u8
+凤凰中文,http://58.144.154.93/qctv.fengshows.cn/live/0701pcc72.m3u8
+凤凰香港,http://58.144.154.93/qctv.fengshows.cn/live/0701phk72.m3u8
+凤凰资讯,http://58.144.154.93/qctv.fengshows.cn/live/0701pin72.m3u8
 哒啵赛事,http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225675/index.m3u8
 黑莓电影,http://[2409:8087:1a0b:df::4014]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225743/index.m3u8
 军事评论,http://[2409:8087:1a0b:df::4005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225668/index.m3u8
