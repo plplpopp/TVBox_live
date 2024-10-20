@@ -1,7 +1,7 @@
 {
     "urls": [
         {
-            "url": "https://supprise0901.github.io/TVBox_warehouse/%E5%BD%B1%E8%A7%86/api.json",
+            "url": "https://ghp.ci/https://raw.githubusercontent.com/Supprise0901/TVBox_warehouse/main/%E5%BD%B1%E8%A7%86/api.json",
             "name": "panda_影视"
         },
         {
