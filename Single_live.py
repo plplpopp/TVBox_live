@@ -13,7 +13,7 @@ def get_url(name):
     try:
         # 配置ChromeOptions以启用无头模式
         chrome_options = Options()
-        chrome_options.add_argument("--headless")
+        # chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
@@ -52,7 +52,7 @@ def get_url(name):
                     print(element.text.strip())
                     m3u8_list.append(element.text.strip())
                     with open('m3u8_list.txt', 'a', encoding='utf-8') as f:
-                        f.write(element.text.strip() + '\n')
+                        f.write(f'{name},{element.text.strip()}' + '\n')
 
         # 关闭WebDriver
         driver.quit()
