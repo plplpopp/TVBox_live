@@ -55,13 +55,6 @@
 河南卫视,http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031119/1.m3u8?channel-id=bestzb&Contentid=5000000011000031119&livemode=1&stbId=3
 河南卫视,http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031119/1.m3u8
 河南卫视,http://[2409:8087:5e00:24::1e]:6060/000000001000/7304224304099543804/1.m3u8
-中国教育,http://61.163.181.78:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
-河南都市频道,http://61.163.181.78:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-河南民生频道,http://61.163.181.78:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
-河南法制频道,http://61.163.181.78:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
-河南电视剧频道,http://61.163.181.78:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
-河南新闻频道,http://61.163.181.78:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
-梨园频道,http://61.163.181.78:9901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
 湖北卫视,http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000001000010355/1.m3u8
 湖北卫视,http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227238/index.m3u8
 湖北卫视,http://[2409:8087:5e00:24::1e]:6060/000000001000/1000000001000024621/1.m3u8
